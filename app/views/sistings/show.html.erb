@@ -7,9 +7,9 @@
 	<div class="col-md-6">
 		<h3><%= @sisting.name %></h3>
 		<p>
-			Price(When Buying): <%= number_to_currency(@sisting.sellprice) %></p>
+			Price(When Buying): <%= number_to_currency(@sisting.sellprice, unit: "UGX  ") %></p>
 		<p>
-			Price(For Rent): <%= number_to_currency(@sisting.rentprice) %></p>
+			Price(For Rent): <%= number_to_currency(@sisting.rentprice, unit: "UGX  ") %></p>
 		<p>
 			<strong>Description:</strong>
 			<%= @sisting.description %></p>
