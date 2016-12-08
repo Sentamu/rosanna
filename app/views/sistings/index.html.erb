@@ -25,7 +25,9 @@
 
  <div class="row">
  <% @sistings.each do |sisting| %>
- <div class="col-xs-12 col-md-4">
+
+ <div class="col-xs-10 col-md-4">
+  <div class="center">
    <div class="thumbnail nnx">
     <%= link_to image_tag(sisting.image.url), sisting %>
 
@@ -41,6 +43,7 @@
    
        
   </div>
+   </div>
 
  <h4><%= sisting.name %></h4>
 
