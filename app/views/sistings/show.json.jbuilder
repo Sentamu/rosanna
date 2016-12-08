@@ -1,0 +1,1 @@
+json.partial! "sistings/sisting", sisting: @sisting

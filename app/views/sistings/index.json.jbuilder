@@ -1,0 +1,1 @@
+json.array! @sistings, partial: 'sistings/sisting', as: :sisting

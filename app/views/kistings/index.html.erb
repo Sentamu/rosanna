@@ -1,0 +1,58 @@
+ <div class="center">
+  <nav class="navbar navbar-default navbar-static-top cont " role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav ">
+        <li><a href="/listings">Bridal Gowns</a></li> 
+        <li><a href="/sistings">Brides Maids</a></li> 
+       
+
+        <li><a href="/kistings">Changing Gowns</a></li>
+        
+        
+      </ul>
+      <form class="navbar-form navbar-center">
+        
+      </form>
+     
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+ <div class="row">
+ <% @kistings.each do |kisting| %>
+ <div class="col-xs-6 col-md-4">
+   <div class="thumbnail nnx">
+    <%= link_to image_tag(kisting.image.url), kisting %>
+
+   
+        
+        
+        <% kisting.description %>
+        <% kisting.sellprice %>
+        <% kisting.rentprice %>
+        <% link_to 'Show', kisting %>
+        <% link_to 'Edit', edit_kisting_path(kisting) %>
+        <% link_to 'Destroy', kisting, method: :delete, data: { confirm: 'Are you sure?' } %>
+   
+       
+  </div>
+
+ <h4><%= kisting.name %></h4>
+
+  </div>
+<% end %>
+</div>
+</div>
+ 
+
+<br>
+
+
+<%<% if user_signed_in? %>
+<%= link_to 'New Listing', new_kisting_path, class: "btn btn-link" %>
+<% end %>

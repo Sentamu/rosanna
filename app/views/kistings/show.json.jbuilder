@@ -1,0 +1,1 @@
+json.partial! "kistings/kisting", kisting: @kisting

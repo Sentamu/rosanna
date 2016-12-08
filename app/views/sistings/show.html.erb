@@ -1,0 +1,25 @@
+<div class="row">
+	<div class="col-md-6">
+		<div class="thumbnail">
+	<%= image_tag @sisting.image.url %>
+</div>
+	</div>
+	<div class="col-md-6">
+		<h3><%= @sisting.name %></h3>
+		<p>
+			Price(When Buying): <%= number_to_currency(@sisting.sellprice) %></p>
+		<p>
+			Price(For Rent): <%= number_to_currency(@sisting.rentprice) %></p>
+		<p>
+			<strong>Description:</strong>
+			<%= @sisting.description %></p>
+		<br>
+		
+	</div>
+</div>
+
+
+</p>
+
+<%= link_to 'Edit', edit_sisting_path(@sisting) %> |
+<%= link_to 'Back', sistings_path %>
